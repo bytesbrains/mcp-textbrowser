@@ -1,0 +1,55 @@
+{
+  "name": "@bytesbrains/mcp-textbrowser",
+  "version": "1.1.2",
+  "description": "MCP server — text-first headless browser with DOM + OCR. Zero image tokens by default. 5-15x cheaper than screenshot-based browser MCPs.",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "browser",
+    "playwright",
+    "ocr",
+    "tesseract",
+    "claude-code",
+    "ai-agent",
+    "automation"
+  ],
+  "author": "nandal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nandal/pi-ext.git",
+    "directory": "mcp-textbrowser"
+  },
+  "homepage": "https://github.com/nandal/pi-ext/tree/main/mcp-textbrowser",
+  "bugs": {
+    "url": "https://github.com/nandal/pi-ext/issues"
+  },
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-textbrowser": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node18 --format=esm --outfile=dist/index.js --external:playwright --external:tesseract.js \"--banner:js=#!/usr/bin/env node\" && chmod +x dist/index.js",
+    "dev": "tsx --watch src/index.ts",
+    "prepublishOnly": "npm run build",
+    "publish:npm": "npm login --registry https://registry.npmjs.org --userconfig .npmrc.npmjs && npm publish --access public --userconfig .npmrc.npmjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "playwright": "^1.50.0",
+    "tesseract.js": "^6.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "tsx": "^4.19.0"
+  }
+}
