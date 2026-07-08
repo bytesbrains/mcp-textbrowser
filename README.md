@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@bytesbrains/mcp-textbrowser)](https://www.npmjs.com/package/@bytesbrains/mcp-textbrowser)
 [![license](https://img.shields.io/npm/l/@bytesbrains/mcp-textbrowser)](./LICENSE)
+[![CI](https://github.com/bytesbrains/mcp-textbrowser/actions/workflows/ci.yml/badge.svg)](https://github.com/bytesbrains/mcp-textbrowser/actions/workflows/ci.yml)
 
 > MCP server — text-first headless browser for Claude Code and any MCP host.
 > DOM + OCR text maps. **Zero image tokens** by default. **5-15x cheaper** than screenshot-based browser MCPs.
@@ -104,3 +105,8 @@ MIT © [BytesBrains](https://bytesbrains.io)
 ---
 
 *Built by Agent, for Agents 🤖*
+
+---
+
+Built and maintained by [BytesBrains](https://bytesbrains.com) — AI automation & agents, engineered to production standards.
+*The model proposes, code guarantees.*
